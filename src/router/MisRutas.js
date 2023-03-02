@@ -1,5 +1,5 @@
 import React from 'react'
-import { Routes, Route, BrowserRouter, NavLink } from 'react-router-dom'
+import { Routes, Route, BrowserRouter, Navigate } from 'react-router-dom'
 import { Contacto } from '../components/Contacto'
 import { Curriculum } from '../components/Curriculum'
 import { Inicio } from '../components/Inicio'
@@ -11,24 +11,23 @@ import { HeaderNav } from '../layout/HeaderNav'
 export const MisRutas = () => {
   return (
     <BrowserRouter>
-    {/* HEADER Y NAVEGACION*/}
-    <HeaderNav/>
-  
+      {/* HEADER Y NAVEGACION*/}
+      <HeaderNav />
 
+      {/* CONTENIDO CENTRAL*/}
+      <section className='content'>
+        <Routes>
+          <Route path='/' element={<Navigate to="/inicio"/>}/>
+          <Route path='/inicio' element={<Inicio />}/>
+          <Route path='/portafolio' element={<Portafolio />}/>
+          <Route path='/servicios' element={<Servicios />}/>
+          <Route path='/curriculum' element={<Curriculum />}/>
+          <Route path='/contacto' element={<Contacto />}/>
+        </Routes>
+      </section>
 
-    {/* CONTENIDO CENTRAL*/}
-    <Routes>
-        <Route path='/' element={<Inicio/>}></Route>
-        <Route path='/inicio' element={<Inicio/>}></Route>
-        <Route path='/portafolio' element={<Portafolio/>}></Route>
-        <Route path='/servicios' element={<Servicios/>}></Route>
-        <Route path='/curriculum' element={<Curriculum/>}></Route>
-        <Route path='/contacto' element={<Contacto/>}></Route>
-    </Routes>
-
-    
-    {/* FOOTER */}
-    <Footers/>
+      {/* FOOTER */}
+      <Footers />
 
     </BrowserRouter>
   )
