@@ -24,10 +24,26 @@ code {
   align-items: center;
   list-style: none;
   height: 132px;
+  border-bottom: 3px solid black;
+  margin-bottom: 35px;
 }
 
 .header .logo{
   flex-grow: 2;
+  display: flex;
+}
+.header .logo span{
+  display: block;
+  font-size: 95px;
+  font-weight: bolder;
+  margin-top: -8px;
+}
+
+.header .logo h3 {
+  display: flex;
+  flex-basis: 40px;
+  margin-left: 10px;
+  font-weight: lighter;
 }
 
 .header nav{

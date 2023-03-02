@@ -25,6 +25,8 @@ export const MisRutas = () => {
         <Route path='/curriculum' element={<Curriculum/>}></Route>
         <Route path='/contacto' element={<Contacto/>}></Route>
     </Routes>
+
+    
     {/* FOOTER */}
     <Footers/>
 
