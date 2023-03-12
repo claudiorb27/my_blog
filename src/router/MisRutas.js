@@ -12,7 +12,7 @@ export const MisRutas = () => {
   return (
     <BrowserRouter>
       {/* HEADER Y NAVEGACION*/}
-      <HeaderNav />
+      <HeaderNav/>
 
       {/* CONTENIDO CENTRAL*/}
       <section className='content'>
@@ -27,7 +27,7 @@ export const MisRutas = () => {
       </section>
 
       {/* FOOTER */}
-      <Footers />
+      <Footers/>
 
     </BrowserRouter>
   )
